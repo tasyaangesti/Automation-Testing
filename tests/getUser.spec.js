@@ -7,7 +7,7 @@ describe("GET USER BY ID", () => {
   test("valid user id", async () => {
     try {
       const access_token = `Bearer ${process.env.token}`;
-      const userId = 6871535;
+      const userId = 6871591;
       const url = `https://gorest.co.in/public/v2/users/${userId}`;
 
       const headers = {
@@ -16,6 +16,7 @@ describe("GET USER BY ID", () => {
 
       const response = await axios.get(`${url}`, { headers });
       console.log("response >", response.data);
+      console.log("Response status code:", response.status);
       expect(response.status).toBe(200);
     } catch (error) {
       if (error.response && error.response.status === 404) {
@@ -37,6 +38,7 @@ describe("GET USER BY ID", () => {
       };
 
       const response = await axios.get(url, { headers });
+      console.log('Response status code:', response.status);
       console.log("response >", response.data);
       expect(response.status).toBe(404);
     } catch (error) {

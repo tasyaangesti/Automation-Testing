@@ -8,13 +8,13 @@ describe("PUT USER BY ID", () => {
     let errorMessage = "";
 
     const access_token = `Bearer ${process.env.token}`;
-    const userId = 6849953;
+    const userId = 6871591;
     const url = `https://gorest.co.in/public/v2/users/${userId}`;
 
     const updateUser = {
-      name: "Dayaananda Joshiana",
-      email: "dayaananda_joshiana@franecki.test",
-      gender: "male",
+      name: "Madame Webyyy",
+      email: "madamewebbyyy@yomail.com",
+      gender: "female",
       status: "active",
     };
     const headers = {
@@ -24,6 +24,7 @@ describe("PUT USER BY ID", () => {
 
     try {
       const response = await axios.put(url, updateUser, { headers });
+      console.log("Response status code:", response.status);
       console.log("response >", response.data);
       expect(response.status).toBe(200);
     } catch (error) {
@@ -42,8 +43,8 @@ describe("PUT USER BY ID", () => {
     const url = `https://gorest.co.in/public/v2/users/${userId}`;
 
     const updateUser = {
-      name: "Petra Lee3",
-      email: "Petra.lee3@mail.com",
+      name: "Madame Web",
+      email: "madam eweb@yomail.com",
       gender: "female",
       status: "active",
     };
@@ -54,6 +55,7 @@ describe("PUT USER BY ID", () => {
 
     try {
       const response = await axios.put(url, updateUser, { headers });
+      console.log("Response status code:", response.status);
       console.log("response >", response.data);
       expect(response.status).toBe(404);
     } catch (error) {

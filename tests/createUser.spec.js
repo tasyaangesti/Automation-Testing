@@ -12,9 +12,9 @@ describe("CREATE USER", () => {
     const url = "https://gorest.co.in/public/v2/users";
     const newUser = {
       // id: "",
-      name: "Phoenix Jill",
-      email: "phoeinxjill@mail.com",
-      gender: "male",
+      name: "Madame Web",
+      email: "madameweb@yomail.com",
+      gender: "female",
       status: "active",
     };
     const headers = {
@@ -24,6 +24,7 @@ describe("CREATE USER", () => {
 
     try {
       const response = await axios.post(url, newUser, { headers });
+      console.log("Response status code:", response.status);
       console.log("response >", response.data);
       expect(response.status).toBe(201);
       // expect(response.data.name).toBe("blair1");
@@ -44,8 +45,8 @@ describe("CREATE USER", () => {
 
     const url = "https://gorest.co.in/public/v2/users";
     const newUser = {
-      name: "Petra Lee3",
-      email: "Petra Lee3@mail.com",
+      name: "Madame Web",
+      email: "madame web@yomail.com",
       gender: "female",
       status: "active",
     };
@@ -56,6 +57,7 @@ describe("CREATE USER", () => {
 
     try {
       const response = await axios.post(url, newUser, { headers });
+      console.log("Response status code:", response.status);
       console.log("response >", response.data);
       expect(response.status).toBe(400);
     } catch (error) {
@@ -89,6 +91,7 @@ describe("CREATE USER", () => {
 
     try {
       const response = await axios.post(url, newUser, { headers });
+      console.log("Response status code:", response.status);
       console.log("response >", response.data);
       expect(response.status).toBe(401);
     } catch (error) {

@@ -8,7 +8,7 @@ describe("DELETE USER BY ID", () => {
     let errorMessage = "";
 
     const access_token = `Bearer ${process.env.token}`;
-    const userId = 6871510;
+    const userId = 6871591;
     const url = `https://gorest.co.in/public/v2/users/${userId}`;
 
     const headers = {
@@ -18,6 +18,7 @@ describe("DELETE USER BY ID", () => {
 
     try {
       const response = await axios.delete(url, { headers });
+      console.log('Response status code:', response.status);
       console.log("successfully deleted user", response.data);
       expect(response.status).toBe(204);
     } catch (error) {
@@ -42,6 +43,7 @@ describe("DELETE USER BY ID", () => {
 
     try {
       const response = await axios.delete(url, { headers });
+      console.log('Response status code:', response.status);
       console.log("successfully deleted user", response.data);
       expect(response.status).toBe(404);
     } catch (error) {
@@ -55,7 +57,7 @@ describe("DELETE USER BY ID", () => {
   test("invalid access token", async () => {
     let errorMessage = "";
 
-    const access_token = `Bearerr ${process.env.token}`;
+    const access_token = `Bearerrr ${process.env.token}`;
     const userId = 6871536;
     const url = `https://gorest.co.in/public/v2/users/${userId}`;
 
@@ -66,6 +68,7 @@ describe("DELETE USER BY ID", () => {
 
     try {
       const response = await axios.delete(url, { headers });
+      console.log('Response status code:', response.status);
       console.log("successfully deleted user", response.data);
       expect(response.status).toBe(404);
     } catch (error) {
