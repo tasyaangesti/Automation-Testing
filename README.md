@@ -63,7 +63,7 @@ _Positive Scenario:_
 _Negative Scenarios:_
 
 ```bash
-1. Attempt to create a user with invalid data (e.g., missing required fields, invalid email format).
+1. Attempt to create a user with invalid data (e.g., invalid token, invalid email format).
 2. Verify appropriate error handling (status codes, error messages).
 ```
 
@@ -102,7 +102,7 @@ Negative Scenarios:
 _Negative Scenarios:_
 
 ```bash
-1. Attempt to update user details with invalid data.
+1. Attempt to update user details with invalid user id.
 2. Verify appropriate error handling (status codes, error messages).
 ```
 
@@ -121,6 +121,6 @@ _Positive Scenario:_
 _Negative Scenarios:_
 
 ```bash
-1. Attempt to delete a non-existent user.
+1. Attempt to delete a non-existent user (e.g., invalid token, invalid user id).
 2. Verify appropriate error handling (status codes, error messages).
 ```

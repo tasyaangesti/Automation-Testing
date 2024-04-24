@@ -1,6 +1,7 @@
 const { test, expect } = require("@playwright/test");
 const axios = require("axios");
 const { describe } = require("node:test");
+
 require("dotenv").config();
 
 describe("CREATE USER", () => {
@@ -12,8 +13,8 @@ describe("CREATE USER", () => {
     const url = "https://gorest.co.in/public/v2/users";
     const newUser = {
       // id: "",
-      name: "Madame Web",
-      email: "madameweb@yomail.com",
+      name: "Madame Webu",
+      email: "madamewebu@yomail.com",
       gender: "female",
       status: "active",
     };
