@@ -10,8 +10,8 @@ test("CREATE USER", async () => {
   const url = "https://gorest.co.in/public/v2/users";
   const newUser = {
     // id: "",
-    name: "blair4",
-    email: "blair4@mail.com",
+    name: "karaaa",
+    email: "karaaa@mail.com",
     gender: "female",
     status: "active",
   };
