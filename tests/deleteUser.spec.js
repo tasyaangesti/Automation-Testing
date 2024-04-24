@@ -8,7 +8,7 @@ describe("DELETE USER BY ID", () => {
     let errorMessage = "";
 
     const access_token = `Bearer ${process.env.token}`;
-    const userId = 6871517;
+    const userId = 6871510;
     const url = `https://gorest.co.in/public/v2/users/${userId}`;
 
     const headers = {
